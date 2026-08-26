@@ -29,7 +29,7 @@
   --sh-md:0 4px 10px rgba(0,0,0,.08);
 }
 *{box-sizing:border-box}
-body{margin:0;font-family:var(--ft-font);font-size:14px;line-height:1.5;color:var(--ft-fg-1);background:var(--ft-sable)}
+body{margin:0;font-family:var(--ft-font);font-size:14px;line-height:1.5;color:var(--ft-fg-1);background:#fff}
 a{color:var(--ft-indigo);text-decoration:none}
 button{font-family:inherit}
 .icon{width:20px;height:20px;display:block}
@@ -63,20 +63,25 @@ button{font-family:inherit}
 /* ---- Colonne principale ---- */
 .main-col{flex:1;min-width:0;display:flex;flex-direction:column}
 
-header.site{background:var(--ft-white);border-bottom:1px solid var(--ft-border);position:sticky;top:0;z-index:1100}
+header.site{background:var(--ft-navy);border-bottom:1px solid rgba(255,255,255,.12);position:sticky;top:0;z-index:1100}
 .site-inner{padding:14px 32px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .site-inner img.logo{height:38px}
-.rf-logo{height:42px;width:auto;flex:none}
-.site-sep{width:1px;height:36px;background:var(--ft-border);flex:none}
-.site-title h1{font-size:19px;font-weight:700;margin:0;line-height:1.25;color:var(--ft-navy)}
+.rf-logo{height:34px;width:auto;flex:none;background:#fff;padding:4px 8px;border-radius:4px}
+.site-sep{width:1px;height:36px;background:rgba(255,255,255,.2);flex:none}
+.site-title{display:flex;align-items:center;gap:10px}
+.site-title h1{font-size:19px;font-weight:700;margin:0;line-height:1.25;color:#fff}
 .header-actions{margin-left:auto;display:flex;align-items:center;gap:10px}
-.btn-pill{display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;font-weight:500;font-size:13px;border:0;cursor:pointer}
-.btn-pill--rose{background:var(--ft-rose-light);color:var(--ft-rose)}
-.btn-pill--navy{background:var(--ft-navy);color:#fff}
-.btn-pill--bleu{background:var(--ft-bleu-light);color:var(--ft-bleu)}
+.btn-pill{display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:9px;font-weight:700;font-size:13px;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s;backdrop-filter:blur(6px)}
+.btn-pill:hover{transform:translateY(-2px)}
+.btn-pill--rose{background:rgba(229,0,91,.26);border:1px solid rgba(255,120,175,.75);box-shadow:0 0 24px rgba(229,0,91,.55),0 0 6px rgba(255,150,190,.6),inset 0 0 10px rgba(255,255,255,.08);color:#FFEAF2}
+.btn-pill--rose:hover{background:rgba(229,0,91,.36);box-shadow:0 0 34px rgba(229,0,91,.75),0 0 10px rgba(255,150,190,.8),inset 0 0 12px rgba(255,255,255,.12)}
+.btn-pill--navy{background:rgba(126,88,160,.26);border:1px solid rgba(190,155,220,.75);box-shadow:0 0 24px rgba(126,88,160,.55),0 0 6px rgba(200,170,230,.6),inset 0 0 10px rgba(255,255,255,.08);color:#F5EEFC}
+.btn-pill--navy:hover{background:rgba(126,88,160,.36);box-shadow:0 0 34px rgba(126,88,160,.75),0 0 10px rgba(200,170,230,.8),inset 0 0 12px rgba(255,255,255,.12)}
+.btn-pill--bleu{background:rgba(64,107,222,.26);border:1px solid rgba(140,170,255,.75);box-shadow:0 0 24px rgba(64,107,222,.55),0 0 6px rgba(160,190,255,.6),inset 0 0 10px rgba(255,255,255,.08);color:#EAF1FF}
+.btn-pill--bleu:hover{background:rgba(64,107,222,.36);box-shadow:0 0 34px rgba(64,107,222,.75),0 0 10px rgba(160,190,255,.8),inset 0 0 12px rgba(255,255,255,.12)}
 .header-icon-btn{position:relative;display:inline-flex}
-.header-icon-btn button{width:38px;height:38px;border-radius:50%;background:var(--ft-sable);border:1px solid var(--ft-border);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ft-navy)}
-.header-icon-btn button:hover{background:var(--ft-indigo-light);border-color:var(--ft-indigo)}
+.header-icon-btn button{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff}
+.header-icon-btn button:hover{background:rgba(255,255,255,.22)}
 .header-icon-btn .tip-bubble{position:absolute;top:120%;right:0;background:var(--ft-navy);color:#fff;padding:6px 11px;border-radius:6px;font-size:11.5px;font-weight:400;white-space:nowrap;box-shadow:var(--sh-md);opacity:0;visibility:hidden;transition:opacity .15s;z-index:60}
 .header-icon-btn:hover .tip-bubble,.header-icon-btn button:focus + .tip-bubble{opacity:1;visibility:visible}
 
@@ -104,7 +109,7 @@ section.block{margin-bottom:36px}
 
 /* ---- KPI synthèse : carte neutre + code couleur par groupe fonctionnel ---- */
 .kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;flex:1;align-content:stretch}
-.indic-layout{display:grid;grid-template-columns:1fr 3fr;gap:20px;align-items:stretch}
+.indic-layout{display:grid;grid-template-columns:1fr 3fr;gap:20px;align-items:stretch;border:1px solid var(--ft-border);border-radius:16px;padding:20px}
 .left-col{display:flex;flex-direction:column;gap:14px;height:100%}
 .right-col{display:flex;flex-direction:column;height:100%}
 
@@ -118,11 +123,11 @@ section.block{margin-bottom:36px}
 .kpi-legend .dot.form{background:var(--ft-violet)}
 
 /* ---- Sélecteur de territoire (carte interactive) ---- */
-.territory-card{width:100%;flex:none;background:#fff;border:1px solid var(--ft-border);border-radius:10px;padding:16px;box-shadow:var(--sh-sm)}
+.territory-card{width:100%;flex:none;background:#fff;border:1px solid transparent;border-radius:10px;padding:16px;box-shadow:var(--sh-sm)}
 .territory-select{width:100%;padding:10px 12px;font:inherit;font-size:13px;border:1px solid var(--ft-border);border-radius:6px;color:var(--ft-navy);background:#fff;margin-bottom:8px}
 .territory-crumb{font-size:12.5px;color:var(--ft-fg-3);margin-bottom:10px;display:flex;align-items:center;gap:6px}
 .territory-crumb .cur{color:var(--ft-indigo);font-weight:600}
-.map-wrap{background:var(--ft-sable);border-radius:8px;padding:8px;position:relative}
+.map-wrap{background:transparent;border-radius:8px;padding:8px;position:relative}
 #franceMap{width:100%;height:auto;display:block}
 #franceMap .region{fill:var(--ft-indigo);stroke:#fff;stroke-width:1.6;cursor:pointer;transition:fill .15s}
 #franceMap .region:hover{fill:var(--ft-bleu)}
@@ -133,7 +138,7 @@ section.block{margin-bottom:36px}
 /* ---- Vignette indicateur : titre ancré en haut, reste centré, dimensions homogènes ---- */
 .kpi{cursor:pointer;border-radius:12px;padding:16px 16px 14px 16px;box-shadow:var(--sh-sm);transition:box-shadow .18s,transform .18s;position:relative;overflow:hidden;display:flex;flex-direction:column;border:1px solid transparent;height:126px}
 .kpi:hover{box-shadow:var(--sh-md);transform:translateY(-2px)}
-.kpi-watermark{position:absolute;right:-14px;bottom:-14px;width:62px;height:62px;opacity:.10;pointer-events:none}
+.kpi-watermark{position:absolute;right:-20px;top:50%;transform:translateY(-50%);width:124px;height:124px;opacity:.13;pointer-events:none}
 .kpi-top{display:flex;align-items:center;gap:7px;position:relative;z-index:1;width:100%;flex:none;padding-right:46px}
 .kpi-chip{width:24px;height:24px;border-radius:7px;background:#fff;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:var(--sh-sm)}
 .kpi-chip .icon{width:13px;height:13px}
@@ -162,19 +167,32 @@ section.block{margin-bottom:36px}
 .kpi--form .kpi-chip .icon,.kpi--form .kpi-watermark{color:var(--ft-violet)}
 
 /* territorial : inverse (libellé en marine, valeur/comparatif teintés) */
-.kpi-terr{background:var(--ft-bordeaux-light);border:2px solid var(--ft-bordeaux);flex:none;width:400px;scroll-snap-align:start;height:126px}
+.kpi-terr{background:var(--ft-bordeaux-light);border:1px solid transparent;flex:none;width:400px;scroll-snap-align:start;height:126px}
 .kpi-terr .kpi-watermark{color:var(--ft-bordeaux)}
 .kpi-terr .kpi-chip .icon{color:var(--ft-bordeaux)}
 .kpi-terr .kpi-num{color:var(--ft-bordeaux)}
 .kpi-terr .kpi-compare{color:var(--ft-bordeaux)}
+.terr-panel{background:linear-gradient(135deg,var(--ft-bordeaux-light) 0%,var(--ft-bordeaux) 100%);border-radius:14px;padding:20px 24px;position:relative;overflow:hidden}
+.terr-panel > *:not(.panel-graphic){position:relative;z-index:1}
+
+.uc-panel{background:linear-gradient(135deg,var(--ft-indigo-light) 0%,var(--ft-indigo) 100%);border-radius:14px;padding:20px 24px;position:relative;overflow:hidden}
+.uc-panel > *:not(.panel-graphic){position:relative;z-index:1}
+
+.public-panel{background:linear-gradient(135deg,var(--ft-violet-light) 0%,var(--ft-violet) 100%);border-radius:14px;padding:20px 24px;position:relative;overflow:hidden}
+.public-panel > *:not(.panel-graphic){position:relative;z-index:1}
+
+/* ---- Décor de fond : dégradé diagonal + picto géant rogné (visible à partir de 50% de la largeur) ---- */
+.panel-graphic{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none;border-radius:inherit}
+.panel-graphic .p-icon{position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:250px;height:250px;color:#fff;opacity:.16}
+
+
 .click-note{background:var(--ft-jaune-light);border-radius:999px;padding:7px 14px;font-size:11.5px;color:var(--ft-fg-2);display:flex;align-items:center;gap:6px;white-space:nowrap;flex:none}
 .click-note svg{flex:none;color:var(--ft-jaune-dark)}
 
 /* ---- Pellicule : bandeau défilant horizontal type film-strip ---- */
 .reel{position:relative}
-.reel-track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px;scrollbar-width:thin;scrollbar-color:var(--ft-gray-300) transparent}
-.reel-track::-webkit-scrollbar{height:6px}
-.reel-track::-webkit-scrollbar-thumb{background:var(--ft-gray-300);border-radius:999px}
+.reel-track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 4px;scrollbar-width:none}
+.reel-track::-webkit-scrollbar{display:none}
 .reel-nav{position:absolute;top:38%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid var(--ft-border);box-shadow:var(--sh-md);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5;color:var(--ft-navy)}
 .reel-nav.prev{left:-14px}
 .reel-nav.next{right:-14px}
@@ -186,7 +204,7 @@ section.block{margin-bottom:36px}
 .reel-dot.active{width:24px;background:var(--ft-indigo)}
 
 /* ---- Analyse par public : pellicule de tuiles ---- */
-.public-tile{background:#fff;border:1px solid var(--ft-border);border-radius:10px;padding:16px 14px;text-align:center;box-shadow:var(--sh-sm);cursor:pointer;transition:box-shadow .18s,transform .18s;flex:none;width:150px;height:150px;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;position:relative}
+.public-tile{background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.5);border-radius:10px;padding:16px 14px;text-align:center;box-shadow:var(--sh-sm);cursor:pointer;transition:box-shadow .18s,transform .18s;flex:none;width:150px;height:150px;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;position:relative}
 .public-tile:hover{box-shadow:var(--sh-md);transform:translateY(-2px);border-color:var(--ft-indigo)}
 .public-tile .chip{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none}
 .public-tile .chip .icon{color:#fff}
@@ -206,18 +224,23 @@ section.block{margin-bottom:36px}
 .public-tile .xp-tag{position:absolute;top:6px;right:6px;background:var(--ft-jaune-dark);color:#fff;font-size:8.5px;font-weight:800;padding:2px 5px;border-radius:999px;box-shadow:var(--sh-sm);cursor:help;letter-spacing:.02em;z-index:3}
 
 /* ---- Cas d'usage : pellicule de cartes larges ---- */
-.usecase-card{border-radius:10px;padding:22px;box-shadow:var(--sh-sm);border:1px solid var(--ft-border);background:#fff;display:flex;flex-direction:column;gap:10px;border-top:4px solid var(--ft-indigo);flex:none;width:330px;scroll-snap-align:start}
+.usecase-card{border-radius:10px;padding:22px;box-shadow:var(--sh-sm);border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.82);display:flex;flex-direction:column;gap:10px;border-top:4px solid var(--ft-indigo);flex:none;width:330px;scroll-snap-align:start;position:relative;overflow:hidden}
+.usecase-card > *:not(.kpi-watermark){position:relative;z-index:1}
 .usecase-card .chip{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center}
 .usecase-card .chip .icon{color:#fff}
 .usecase-card h3{font-size:15px;font-weight:700;margin:2px 0 0;color:var(--ft-navy)}
 .usecase-card p{font-size:12.5px;color:var(--ft-fg-2);margin:0;flex:1}
-.usecase-card .go{font-size:12.5px;font-weight:500;color:var(--ft-indigo);display:flex;align-items:center;gap:4px}
+.usecase-card .go{font-size:12px;font-weight:700;color:var(--ft-indigo);display:inline-flex;align-items:center;gap:5px;background:var(--ft-indigo-light);padding:8px 14px;border-radius:999px;align-self:flex-start;position:relative;z-index:1;transition:background .15s}
+.usecase-card:hover .go{background:var(--ft-indigo);color:#fff}
 .usecase-card.c1{border-top-color:var(--ft-bleu)}
 .usecase-card.c1 .chip{background:var(--ft-bleu)}
+.usecase-card.c1 .kpi-watermark{color:var(--ft-bleu)}
 .usecase-card.c2{border-top-color:var(--ft-orange)}
 .usecase-card.c2 .chip{background:var(--ft-orange)}
+.usecase-card.c2 .kpi-watermark{color:var(--ft-orange)}
 .usecase-card.c3{border-top-color:var(--ft-bordeaux)}
 .usecase-card.c3 .chip{background:var(--ft-bordeaux)}
+.usecase-card.c3 .kpi-watermark{color:var(--ft-bordeaux)}
 .usecase-card.uc-hidden{display:none}
 
 .uc-filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
@@ -234,8 +257,8 @@ section.block{margin-bottom:36px}
 /* ---- Gouvernance : bandeau pleine largeur (cockpit + feuille de route fondus) ---- */
 .gov-banner{background:linear-gradient(120deg,var(--ft-navy) 0%,var(--ft-indigo) 60%,var(--ft-violet) 130%);border-radius:12px;padding:30px 34px;color:#fff;box-shadow:var(--sh-md);position:relative;overflow:hidden}
 .gov-banner::after{content:"";position:absolute;right:-40px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.06)}
-.gov-top{display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;z-index:1;flex-wrap:wrap}
-.gov-txt{max-width:680px}
+.gov-top{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;position:relative;z-index:1;flex-wrap:wrap}
+.gov-txt{flex:1;min-width:320px;max-width:none}
 .gov-txt .tag{display:inline-block;background:rgba(255,255,255,.15);padding:3px 10px;border-radius:999px;font-size:11px;font-weight:500;margin-bottom:10px}
 .gov-txt h3{font-size:19px;margin:0 0 8px;font-weight:700}
 .gov-txt p{margin:0;font-size:13px;opacity:.85;line-height:1.55}
@@ -251,12 +274,15 @@ section.block{margin-bottom:36px}
 .gov-fr-col-3{flex-direction:row;gap:14px}
 .gov-fr-terr-col{flex:1;display:flex;flex-direction:column;gap:10px;min-width:0}
 .gov-fr-terr-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;opacity:.75;color:#fff}
-.gov-fr-item{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:12px;flex:1}
+.gov-fr-item{background:rgba(255,255,255,.24);border:1px solid rgba(255,255,255,.34);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:12px;flex:1}
 .gov-fr-item .chip{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;flex:none}
 .gov-fr-item .chip .icon{color:#fff;width:17px;height:17px}
 .gov-fr-item .txt h4{margin:0 0 2px;font-size:14px;font-weight:700;color:#fff}
 .gov-fr-item .txt p{margin:0;font-size:11.5px;opacity:.85;color:#fff;line-height:1.35}
-.gov-fr-item.gov-fr-stat{background:rgba(255,255,255,.34);border-color:rgba(255,255,255,.5)}
+.gov-fr-item.gov-fr-stat{background:rgba(13,20,64,.38);border-color:rgba(255,255,255,.3)}
+.gov-fr-item.gov-fr-stat .txt h4,.gov-fr-item.gov-fr-stat .txt p{color:#fff}
+.gov-fr-item.gov-fr-stat .chip{background:rgba(255,255,255,.2)}
+.gov-fr-item.gov-fr-stat .chip .icon{color:#fff}
 .gov-fr-col-3 .gov-fr-item.gov-fr-stat{padding:11px 12px;gap:9px}
 .gov-fr-col-3 .gov-fr-item.gov-fr-stat .txt h4{font-size:17px}
 .gov-fr-col-3 .gov-fr-item.gov-fr-stat .chip{width:30px;height:30px}
@@ -265,6 +291,10 @@ section.block{margin-bottom:36px}
 
 footer.site{border-top:1px solid var(--ft-border);background:var(--ft-white);margin-top:auto}
 footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;font-size:12px;color:var(--ft-fg-3);display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:center}
+.footer-freq{margin-left:auto}
+.footer-freq button{background:var(--ft-sable);border:1px solid var(--ft-border);color:var(--ft-navy)}
+.footer-freq button:hover{background:var(--ft-indigo-light);border-color:var(--ft-indigo)}
+.footer-freq .tip-bubble{top:auto;bottom:120%;right:0}
 .footer-icon{height:30px;width:auto;flex:none}
 .footer-title{font-weight:700;color:var(--ft-fg-1);font-size:13px;white-space:nowrap}
 .footer-sep{width:1px;height:26px;background:var(--ft-border);flex:none}
@@ -307,10 +337,32 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
         <div class="sub-item"><svg class="icon" data-lucide="share-2"></svg>Taux de recours</div>
         <div class="sub-item"><svg class="icon" data-lucide="handshake"></svg>Taux / délai de pourvoi des offres</div>
       </div>
-      <div class="nav-item"><svg class="icon" data-lucide="users-round"></svg><span class="lbl">Analyse par public</span><svg class="icon chev" data-lucide="chevron-right"></svg></div>
-      <div class="nav-item"><svg class="icon" data-lucide="lightbulb"></svg><span class="lbl">Cas d'usage thématiques</span><svg class="icon chev" data-lucide="chevron-right"></svg></div>
-      <div class="nav-item"><svg class="icon" data-lucide="clipboard-list"></svg><span class="lbl">Feuille de route &amp; fiches action</span><svg class="icon chev" data-lucide="chevron-right"></svg></div>
-      <div class="nav-item"><svg class="icon" data-lucide="life-buoy"></svg><span class="lbl">Ressources utilisateurs</span><svg class="icon chev" data-lucide="chevron-right"></svg></div>
+
+      <div class="nav-item"><svg class="icon" data-lucide="map-pin"></svg><span class="lbl">Indicateurs stratégiques territoriaux</span><svg class="icon chev" data-lucide="chevron-down"></svg></div>
+      <div class="sub-nav">
+        <div class="sub-item"><svg class="icon" data-lucide="user-round"></svg>Part des séniors entrants en formation</div>
+        <div class="sub-item"><svg class="icon" data-lucide="factory"></svg>Taux de recours dans l'industrie</div>
+      </div>
+
+      <div class="nav-item"><svg class="icon" data-lucide="landmark"></svg><span class="lbl">Gouvernance du Réseau pour l'emploi</span><svg class="icon chev" data-lucide="chevron-down"></svg></div>
+      <div class="sub-nav">
+        <div class="sub-item"><svg class="icon" data-lucide="file-text"></svg>Fiches action</div>
+        <div class="sub-item"><svg class="icon" data-lucide="map"></svg>Feuilles de route</div>
+      </div>
+
+      <div class="nav-item"><svg class="icon" data-lucide="users-round"></svg><span class="lbl">Analyse par public</span><svg class="icon chev" data-lucide="chevron-down"></svg></div>
+      <div class="sub-nav">
+        <div class="sub-item"><svg class="icon" data-lucide="users"></svg>Tout public</div>
+        <div class="sub-item"><svg class="icon" data-lucide="hand-coins"></svg>BRSA</div>
+        <div class="sub-item"><svg class="icon" data-lucide="plane-landing"></svg>Étrangers primo-arrivants</div>
+      </div>
+
+      <div class="nav-item"><svg class="icon" data-lucide="lightbulb"></svg><span class="lbl">Cas d'usage thématiques</span><svg class="icon chev" data-lucide="chevron-down"></svg></div>
+      <div class="sub-nav">
+        <div class="sub-item"><svg class="icon" data-lucide="target"></svg>Ciblage des formations</div>
+        <div class="sub-item"><svg class="icon" data-lucide="shield-check"></svg>Maintien dans l'emploi</div>
+        <div class="sub-item"><svg class="icon" data-lucide="git-compare-arrows"></svg>Incidence des difficultés de pourvoi sur le taux de recours</div>
+      </div>
     </nav>
   </aside>
 
@@ -324,7 +376,6 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
         <img src="assets/tdb-rpe-icon.svg" alt="" class="logo">
         <div class="site-title"><h1>Tableau de bord du Réseau Pour l'Emploi</h1></div>
         <div class="header-actions">
-          <div class="header-icon-btn"><button aria-label="Fréquentation"><svg class="icon" data-lucide="line-chart" style="width:16px;height:16px"></svg></button><span class="tip-bubble">Fréquentation</span></div>
           <button class="btn-pill btn-pill--bleu"><svg class="icon" data-lucide="life-buoy" style="width:16px;height:16px"></svg>Ressources</button>
           <button class="btn-pill btn-pill--rose"><svg class="icon" data-lucide="book-open" style="width:16px;height:16px"></svg>Glossaire</button>
           <button class="btn-pill btn-pill--navy"><svg class="icon" data-lucide="play-circle" style="width:16px;height:16px"></svg>Tutoriel</button>
@@ -516,6 +567,8 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
         <div class="block-head">
           <h2><svg class="icon" data-lucide="map-pin"></svg>Indicateurs stratégiques territoriaux</h2>
         </div>
+        <div class="terr-panel">
+        <div class="panel-graphic"><svg class="icon p-icon" data-lucide="map-pin"></svg></div>
         <div class="reel">
           <div class="reel-track" id="terrReel">
             <div class="kpi kpi-terr">
@@ -538,7 +591,8 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
             </div>
           </div>
         </div>
-      <div class="reel-dots" id="terrReelDots"></div>
+        <div class="reel-dots" id="terrReelDots"></div>
+        </div>
       </section>
 
       <!-- ============== GOUVERNANCE RPE : pleine largeur, sous la carte et les indicateurs ============== -->
@@ -547,6 +601,7 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
           <h2><svg class="icon" data-lucide="landmark"></svg>Gouvernance du Réseau pour l'emploi</h2>
         </div>
         <div class="gov-banner">
+          <div class="panel-graphic"><svg class="icon p-icon" data-lucide="landmark"></svg></div>
           <div class="gov-top">
             <div class="gov-txt">
               <span class="tag">Instances de pilotage</span>
@@ -599,6 +654,8 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
         <div class="block-head">
           <h2><svg class="icon" data-lucide="users-round"></svg>Analyse par public<span class="info-tip" tabindex="0"><svg class="icon" data-lucide="info"></svg><span class="tip-bubble">Chaque public prioritaire dispose de sa propre déclinaison des indicateurs stratégiques.</span></span></h2>
         </div>
+        <div class="public-panel">
+        <div class="panel-graphic"><svg class="icon p-icon" data-lucide="users-round"></svg></div>
         <div class="reel">
           <div class="reel-track" id="publicReel">
             <div class="public-tile tp"><span class="chip"><svg class="icon" data-lucide="users"></svg></span><div class="lbl">Tout public</div></div>
@@ -613,7 +670,8 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
             <div class="public-tile seniors disabled" title="Bientôt disponible"><span class="chip"><svg class="icon" data-lucide="user-round"></svg></span><div class="lbl">Séniors</div><div class="avail">Bientôt disponible</div></div>
           </div>
         </div>
-      <div class="reel-dots" id="publicReelDots"></div>
+        <div class="reel-dots" id="publicReelDots"></div>
+        </div>
       </section>
 
       <!-- ============== CAS D'USAGE THÉMATIQUES ============== -->
@@ -626,21 +684,26 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
           <button class="uc-filter uc-filter--ent" data-cat="ent">Entreprises</button>
           <button class="uc-filter uc-filter--form" data-cat="form">Formation</button>
         </div>
+        <div class="uc-panel">
+        <div class="panel-graphic"><svg class="icon p-icon" data-lucide="lightbulb"></svg></div>
         <div class="reel">
           <div class="reel-track" id="usecaseReel">
             <div class="usecase-card c1" data-cats="form">
+              <svg class="icon kpi-watermark" data-lucide="target"></svg>
               <span class="chip"><svg class="icon" data-lucide="target"></svg></span>
               <h3>Ciblage des formations</h3>
               <p>Identifier les besoins de formation par territoire et par métier au regard des tensions de recrutement et des publics prioritaires.</p>
               <span class="go">Consulter <svg class="icon" data-lucide="arrow-right" style="width:14px;height:14px"></svg></span>
             </div>
             <div class="usecase-card c2" data-cats="de">
+              <svg class="icon kpi-watermark" data-lucide="shield-check"></svg>
               <span class="chip"><svg class="icon" data-lucide="shield-check"></svg></span>
               <h3>Maintien dans l'emploi</h3>
               <p>Suivre les sorties précoces d'emploi et les leviers d'accompagnement à mobiliser pour sécuriser les parcours.</p>
               <span class="go">Consulter <svg class="icon" data-lucide="arrow-right" style="width:14px;height:14px"></svg></span>
             </div>
             <div class="usecase-card c3" data-cats="ent de">
+              <svg class="icon kpi-watermark" data-lucide="git-compare-arrows"></svg>
               <span class="chip"><svg class="icon" data-lucide="git-compare-arrows"></svg></span>
               <h3>Incidence des difficultés de pourvoi sur le taux de recours</h3>
               <p>Mettre en regard les tensions de recrutement des entreprises et le recours des demandeurs d'emploi au réseau.</p>
@@ -648,7 +711,8 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
             </div>
           </div>
         </div>
-      <div class="reel-dots" id="usecaseReelDots"></div>
+        <div class="reel-dots" id="usecaseReelDots"></div>
+        </div>
       </section>
 
 
@@ -663,6 +727,7 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
         <div class="footer-sep"></div>
         <img src="assets/logo-france-travail.svg" alt="France Travail" class="footer-ft-logo">
         <div class="footer-copy">© 2026 France Travail dans le cadre de sa mission d'appui au Réseau Pour l'Emploi</div>
+        <div class="header-icon-btn footer-freq"><button aria-label="Fréquentation"><svg class="icon" data-lucide="line-chart" style="width:16px;height:16px"></svg></button><span class="tip-bubble">Fréquentation</span></div>
       </div>
     </footer>
 
