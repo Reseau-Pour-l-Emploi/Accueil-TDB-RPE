@@ -187,7 +187,7 @@ section.block{margin-bottom:36px}
 .kpi--form .kpi-chip .icon,.kpi--form .kpi-watermark{color:var(--ft-violet)}
 
 /* territorial : inverse (libellé en marine, valeur/comparatif teintés) */
-.kpi-terr{background:var(--ft-bordeaux-light);border:1px solid transparent;flex:none;width:400px;scroll-snap-align:start;height:220px}
+.kpi-terr{background:var(--ft-bordeaux-light);border:1px solid transparent;flex:none;width:400px;scroll-snap-align:start;height:130px}
 .kpi-terr .kpi-watermark{color:var(--ft-bordeaux)}
 .kpi-terr .kpi-chip .icon{color:var(--ft-bordeaux)}
 .kpi-terr .kpi-num{color:var(--ft-bordeaux)}
@@ -417,7 +417,7 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
 
       <div class="nav-item"><svg class="icon" data-lucide="users-round"></svg><span class="lbl">Analyse ciblée</span><svg class="icon chev" data-lucide="chevron-down"></svg></div>
       <div class="sub-nav">
-        <div class="sub-item"><svg class="icon" data-lucide="users"></svg>Tout public</div>
+        <div class="sub-item"><svg class="icon" data-lucide="users"></svg>Public</div>
         <div class="sub-item"><svg class="icon" data-lucide="hand-coins"></svg>BRSA</div>
         <div class="sub-item"><svg class="icon" data-lucide="plane-landing"></svg>Étrangers primo-arrivants</div>
         <div class="sub-item"><svg class="icon" data-lucide="factory"></svg>Filière</div>
@@ -661,20 +661,18 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
               <svg class="icon kpi-watermark" data-lucide="user-round"></svg>
               <div class="kpi-top"><span class="kpi-chip"><svg class="icon" data-lucide="user-round"></svg></span><span class="kpi-label">Part des séniors entrants en formation</span></div>
               <div class="kpi-body">
-                <div class="kpi-value-row"><span class="kpi-num">21,1 %</span></div>
+                <div class="kpi-value-row"><span class="kpi-num">21,1 %</span><div class="kpi-benchmark" title="Repère national : 24,0 %"><svg class="icon" data-lucide="target"></svg><span class="val">24,0 %</span></div></div>
                 <div class="kpi-month-line">mai 2026</div>
                 <div class="kpi-compare">Cumul 12 mois : 19,5 %</div>
-                <div class="kpi-benchmark" title="Repère national : 24,0 %"><svg class="icon" data-lucide="target"></svg><span class="val">24,0 %</span></div>
               </div>
             </div>
             <div class="kpi kpi-terr">
               <svg class="icon kpi-watermark" data-lucide="factory"></svg>
               <div class="kpi-top"><span class="kpi-chip"><svg class="icon" data-lucide="factory"></svg></span><span class="kpi-label">Taux de recours dans l'industrie</span></div>
               <div class="kpi-body">
-                <div class="kpi-value-row"><span class="kpi-num">20,7 %</span></div>
+                <div class="kpi-value-row"><span class="kpi-num">20,7 %</span><div class="kpi-benchmark" title="Repère national : 25,0 %"><svg class="icon" data-lucide="target"></svg><span class="val">25,0 %</span></div></div>
                 <div class="kpi-month-line">juil. 2026</div>
                 <div class="kpi-compare">19,2 % en juil. 2025</div>
-                <div class="kpi-benchmark" title="Repère national : 25,0 %"><svg class="icon" data-lucide="target"></svg><span class="val">25,0 %</span></div>
               </div>
             </div>
           </div>
@@ -740,13 +738,13 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
       <!-- ============== ANALYSE PAR PUBLIC ============== -->
       <section class="block">
         <div class="block-head">
-          <h2><svg class="icon" data-lucide="users-round"></svg>Analyse ciblée<span class="info-tip" tabindex="0"><svg class="icon" data-lucide="info"></svg><span class="tip-bubble">Permet d'étudier les indicateurs stratégiques pour une population ou un secteur/filière spécifique.</span></span></h2>
+          <h2><svg class="icon" data-lucide="users-round"></svg>Analyse ciblée<span class="info-tip" tabindex="0"><svg class="icon" data-lucide="info"></svg><span class="tip-bubble">Permet d'étudier les indicateurs stratégiques pour une population ou un secteur/filière ou un contexte spécifique.</span></span></h2>
         </div>
         <div class="public-panel">
         <div class="panel-graphic"><svg class="icon p-icon" data-lucide="users-round"></svg></div>
         <div class="reel">
           <div class="reel-track" id="publicReel">
-            <div class="public-tile tp"><span class="chip"><svg class="icon" data-lucide="users"></svg></span><div class="lbl">Tout public</div></div>
+            <div class="public-tile tp"><span class="chip"><svg class="icon" data-lucide="users"></svg></span><div class="lbl">Public</div></div>
             <div class="public-tile brsa">
               <span class="xp-tag" title="Expérimentation de l'accompagnement rénové des allocataires du RSA">XP</span>
               <span class="chip"><svg class="icon" data-lucide="hand-coins"></svg></span><div class="lbl">BRSA</div>
@@ -849,7 +847,7 @@ function renderIcons(){
 renderIcons();
 
 function syncTerrWidth(){
-  var ref = document.querySelector('.kpi-grid .kpi');
+  var ref = document.querySelector('.kpi-col .kpi');
   var terrCards = document.querySelectorAll('.kpi-terr');
   if(!ref || !terrCards.length) return;
   var w = ref.getBoundingClientRect().width;
