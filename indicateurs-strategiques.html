@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tableau de bord du Réseau Pour l'Emploi</title>
+<title>Indicateurs stratégiques — Tableau de bord du Réseau Pour l'Emploi</title>
 <link rel="icon" type="image/svg+xml" href="assets/tdb-rpe-icon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/favicon-180.png">
@@ -414,8 +414,8 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
       <svg class="icon chev-down" data-lucide="chevron-down" style="width:16px;height:16px"></svg>
     </div>
     <nav class="sidebar-nav">
-      <a class="nav-item" href="indicateurs-strategiques.html#indicateurs-strategiques"><svg class="icon" data-lucide="gauge"></svg><span class="lbl">Indicateurs stratégiques</span><span class="chev-btn" aria-label="Plier / déplier" role="button" tabindex="0"><svg class="icon chev" data-lucide="chevron-down"></svg></span></a>
-      <div class="sub-nav">
+      <a class="nav-item active is-open" href="indicateurs-strategiques.html#indicateurs-strategiques"><svg class="icon" data-lucide="gauge"></svg><span class="lbl">Indicateurs stratégiques</span><span class="chev-btn" aria-label="Plier / déplier" role="button" tabindex="0"><svg class="icon chev" data-lucide="chevron-down"></svg></span></a>
+      <div class="sub-nav is-open">
         <div class="sub-item"><svg class="icon" data-lucide="users"></svg>Nombre d'inscrits</div>
         <div class="sub-item"><svg class="icon" data-lucide="door-open"></svg>Accès / Présence en emploi</div>
         <div class="sub-item"><svg class="icon" data-lucide="timer"></svg>Délai de démarrage de l'accompagnement</div>
@@ -473,157 +473,231 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
         </div>
       </div>
     </header>
-    <div class="breadcrumb"><a href="#">Tableau de bord du Réseau Pour l'Emploi</a> &gt; <span class="current">Accueil</span></div>
+    <div class="breadcrumb"><a href="index.html">Tableau de bord du Réseau Pour l'Emploi</a> &gt; <span class="current">Indicateurs stratégiques</span></div>
     <main>
 
 
-      <!-- ============== BANDEAU INDICATEURS STRATÉGIQUES (renvoi vers la page dédiée) ============== -->
+      <!-- ============== INDICATEURS STRATÉGIQUES ============== -->
       <section class="block" id="indicateurs-strategiques">
-        <div class="indic-banner">
-          <div class="panel-graphic"><svg class="icon p-icon" data-lucide="gauge"></svg></div>
-          <div class="indic-banner-body">
-            <h2><svg class="icon" data-lucide="gauge"></svg>Indicateurs stratégiques</h2>
-            <p>La synthèse des résultats de votre territoire et tous les éléments pour faire une analyse détaillée :</p>
-            <ul>
-              <li>Sélection de territoire via la carte ou le fil d'ariane,</li>
-              <li>Vue synthétique des indicateurs du territoire (dernière mise à jour).</li>
-              <li>Vue par indicateur avec navigation temporelle et filtres de population.</li>
-              <li>Comparaison de territoires.</li>
-              <li>Graphique d'évolution.</li>
-              <li>Zooms thématiques.</li>
-              <li>Tableaux personnalisés.</li>
-            </ul>
-            <p>Visualisez également les indicateurs stratégiques définis au niveau local pour mesurer l'impact des actions engagées.</p>
-          </div>
-          <a class="btn-white" href="indicateurs-strategiques.html"><svg class="icon" data-lucide="gauge" style="width:16px;height:16px"></svg>Consulter les indicateurs stratégiques<svg class="icon" data-lucide="arrow-right" style="width:15px;height:15px"></svg></a>
-        </div>
-      </section>
-
-      <!-- ============== ANALYSE PAR PUBLIC ============== -->
-      <section class="block" id="analyse-ciblee">
         <div class="block-head">
-          <h2><svg class="icon" data-lucide="users-round"></svg>Analyse ciblée<span class="info-tip" tabindex="0"><svg class="icon" data-lucide="info"></svg><span class="tip-bubble">Permet d'étudier les indicateurs stratégiques pour une population ou un secteur/filière ou un contexte spécifique.</span></span></h2>
+          <h2><svg class="icon" data-lucide="gauge"></svg>Indicateurs stratégiques</h2>
         </div>
-        <div class="public-panel">
-        <div class="panel-graphic"><svg class="icon p-icon" data-lucide="users-round"></svg></div>
-        <div class="reel">
-          <div class="reel-track" id="publicReel">
-            <div class="public-tile tp"><span class="chip"><svg class="icon" data-lucide="users"></svg></span><div class="lbl">Public</div></div>
-            <div class="public-tile brsa">
-              <span class="xp-tag" title="Expérimentation de l'accompagnement rénové des allocataires du RSA">XP</span>
-              <span class="chip"><svg class="icon" data-lucide="hand-coins"></svg></span><div class="lbl">BRSA</div>
-            </div>
-            <div class="public-tile epa"><span class="chip"><svg class="icon" data-lucide="plane-landing"></svg></span><div class="lbl">Étrangers primo-arrivants</div></div>
-            <div class="public-tile filiere"><span class="chip"><svg class="icon" data-lucide="factory"></svg></span><div class="lbl">Filière</div></div>
-            <div class="public-tile qpv disabled" title="Bientôt disponible"><span class="chip"><svg class="icon" data-lucide="map-pin"></svg></span><div class="lbl">QPV</div><div class="avail">Bientôt disponible</div></div>
-            <div class="public-tile th disabled" title="Bientôt disponible"><span class="chip"><svg class="icon" data-lucide="accessibility"></svg></span><div class="lbl">Travailleurs handicapés</div><div class="avail">Bientôt disponible</div></div>
-            <div class="public-tile jeunes disabled" title="Bientôt disponible"><span class="chip"><svg class="icon" data-lucide="sparkles"></svg></span><div class="lbl">Jeunes</div><div class="avail">Bientôt disponible</div></div>
-            <div class="public-tile seniors disabled" title="Bientôt disponible"><span class="chip"><svg class="icon" data-lucide="user-round"></svg></span><div class="lbl">Séniors</div><div class="avail">Bientôt disponible</div></div>
-          </div>
-        </div>
-        <div class="reel-dots" id="publicReelDots"></div>
-        </div>
-      </section>
 
-      <!-- ============== CAS D'USAGE THÉMATIQUES ============== -->
-      <section class="block" id="cas-usage">
-        <div class="block-head">
-          <h2><svg class="icon" data-lucide="lightbulb"></svg>Cas d'usage thématiques<span class="info-tip" tabindex="0"><svg class="icon" data-lucide="info"></svg><span class="tip-bubble">Analyses croisées prêtes à l'emploi pour répondre à une question de pilotage précise.</span></span></h2>
-        </div>
-        <div class="uc-filters" id="ucFilters">
-          <button class="uc-filter uc-filter--de" data-cat="de">Demandeurs d'emploi</button>
-          <button class="uc-filter uc-filter--ent" data-cat="ent">Entreprises</button>
-          <button class="uc-filter uc-filter--form" data-cat="form">Formation</button>
-        </div>
-        <div class="uc-panel">
-        <div class="panel-graphic"><svg class="icon p-icon" data-lucide="lightbulb"></svg></div>
-        <div class="reel">
-          <div class="reel-track" id="usecaseReel">
-            <div class="usecase-card c1" data-cats="form">
-              <svg class="icon kpi-watermark" data-lucide="target"></svg>
-              <span class="chip"><svg class="icon" data-lucide="target"></svg></span>
-              <h3>Ciblage des formations</h3>
-              <p>Identifier les besoins de formation par territoire et par métier au regard des tensions de recrutement et des publics prioritaires.</p>
-              <span class="go">Consulter <svg class="icon" data-lucide="arrow-right" style="width:14px;height:14px"></svg></span>
+        <div class="indic-layout">
+          <div class="left-col">
+          <div class="territory-card">
+            <select class="territory-select" id="regionSelect">
+              <option value="">National (France entière)</option>
+              <option value="ile-de-france">Île-de-France</option>
+              <option value="centre-val-de-loire">Centre-Val de Loire</option>
+              <option value="bourgogne-franche-comte">Bourgogne-Franche-Comté</option>
+              <option value="normandie">Normandie</option>
+              <option value="hauts-de-france">Hauts-de-France</option>
+              <option value="grand-est">Grand Est</option>
+              <option value="pays-de-la-loire">Pays de la Loire</option>
+              <option value="bretagne">Bretagne</option>
+              <option value="nouvelle-aquitaine">Nouvelle-Aquitaine</option>
+              <option value="occitanie">Occitanie</option>
+              <option value="auvergne-rhone-alpes">Auvergne-Rhône-Alpes</option>
+              <option value="provence-alpes-cote-dazur">Provence-Alpes-Côte d'Azur</option>
+              <option value="corse">Corse</option>
+            </select>
+            <div class="territory-crumb"><span>National</span><svg class="icon" data-lucide="chevron-right" style="width:13px;height:13px"></svg><span class="cur" id="crumbRegion">France entière</span></div>
+            <div class="map-wrap">
+<svg viewBox="0 0 640 620" xmlns="http://www.w3.org/2000/svg" id="franceMap">
+<path class="region" data-code="11" data-nom="Île-de-France" data-slug="ile-de-france" d="M326.3,132.4 L330.6,133.2 L335.2,131.6 L341.4,132.5 L345.3,131.8 L348.3,130.6 L352.0,134.5 L353.7,138.2 L358.4,142.9 L360.8,145.3 L364.0,146.9 L362.1,149.7 L361.7,152.5 L364.2,156.5 L364.4,159.8 L366.9,161.5 L362.5,166.5 L360.8,169.3 L361.3,173.1 L360.0,174.8 L355.6,176.0 L350.7,176.3 L346.2,177.0 L345.0,182.3 L342.7,186.6 L336.2,191.3 L334.1,189.4 L329.5,191.9 L320.3,191.7 L323.0,187.6 L320.0,183.7 L317.9,179.8 L313.9,179.8 L311.1,178.9 L308.2,180.0 L302.0,181.4 L300.0,179.9 L299.8,174.9 L297.9,171.0 L293.0,170.5 L291.4,164.9 L287.4,161.3 L284.3,158.8 L284.7,153.5 L283.1,148.1 L281.8,143.9 L279.4,139.8 L278.6,136.8 L280.0,132.7 L282.8,132.4 L285.8,129.6 L287.1,124.7 L289.6,123.5 L292.1,126.1 L296.1,127.2 L302.8,125.2 L306.3,125.4 L309.3,126.6 L313.7,126.6 L318.0,128.0 L324.0,129.9 L326.3,132.4 Z"></path>
+<path class="region" data-code="24" data-nom="Centre-Val de Loire" data-slug="centre-val-de-loire" d="M338.5,229.2 L342.9,244.9 L346.6,262.8 L342.5,273.7 L334.0,278.8 L327.7,281.2 L326.7,286.6 L322.6,291.1 L313.1,295.7 L304.2,297.7 L293.9,297.0 L287.6,298.0 L281.4,298.7 L276.5,301.6 L268.3,300.8 L264.5,295.6 L257.4,288.1 L254.4,280.7 L249.6,272.0 L243.9,262.9 L237.0,264.2 L228.2,262.3 L224.2,258.1 L219.8,253.5 L218.0,246.5 L222.4,236.0 L224.8,225.8 L232.1,224.7 L237.5,220.9 L242.4,214.8 L247.9,208.4 L251.3,202.1 L249.2,195.2 L254.3,190.7 L249.6,184.5 L250.6,178.1 L256.1,172.9 L254.8,165.8 L250.0,157.8 L258.4,154.2 L263.1,151.8 L270.6,151.8 L276.8,145.6 L281.1,143.2 L282.9,151.1 L285.7,159.7 L291.7,165.5 L297.2,171.6 L299.9,177.8 L304.9,180.8 L311.2,179.8 L318.0,179.9 L323.3,186.7 L325.6,191.2 L335.7,189.1 L344.8,191.0 L349.3,199.0 L344.2,206.6 L340.8,214.1 L340.5,219.1 L338.6,227.1 L338.5,229.2 Z"></path>
+<path class="region" data-code="27" data-nom="Bourgogne-Franche-Comté" data-slug="bourgogne-franche-comte" d="M370.9,277.0 L364.4,283.0 L355.5,279.1 L346.5,272.2 L345.2,254.8 L340.8,233.9 L341.4,224.0 L338.0,214.2 L344.2,207.4 L348.4,198.6 L342.7,190.0 L344.9,179.9 L353.1,176.6 L362.2,176.9 L369.9,184.3 L376.2,189.4 L381.3,198.5 L383.4,203.9 L393.1,202.6 L399.7,202.6 L410.1,199.0 L420.7,201.2 L427.1,207.5 L428.3,215.3 L432.4,220.0 L439.9,222.8 L446.3,222.3 L455.3,219.4 L459.0,212.5 L465.2,207.3 L469.9,203.0 L479.5,199.0 L488.1,201.9 L498.3,203.0 L507.9,210.6 L517.2,217.1 L516.6,224.8 L518.6,230.8 L511.2,237.8 L516.2,241.6 L509.0,251.0 L503.7,258.3 L491.6,276.2 L478.0,287.3 L471.1,302.8 L459.2,303.9 L449.5,305.5 L445.4,299.4 L439.7,294.7 L432.9,293.4 L426.2,294.7 L418.1,312.4 L416.9,305.6 L410.3,306.6 L403.1,310.4 L397.4,311.9 L387.0,313.0 L384.2,305.1 L386.8,294.7 L376.9,290.1 L370.7,277.5 L370.9,277.0 Z"></path>
+<path class="region" data-code="28" data-nom="Normandie" data-slug="normandie" d="M166.9,115.2 L182.0,115.5 L201.7,118.6 L220.3,112.5 L219.9,108.1 L222.5,94.2 L237.0,86.4 L256.4,80.2 L273.8,71.3 L279.6,74.2 L287.1,80.3 L291.2,89.1 L289.9,93.7 L287.9,101.3 L290.6,105.7 L289.0,110.9 L291.1,118.0 L288.0,122.7 L285.0,130.6 L279.2,133.8 L279.4,139.8 L274.2,147.1 L267.6,152.0 L262.0,152.8 L254.6,155.4 L250.5,161.6 L256.0,168.8 L254.0,176.3 L248.5,180.6 L246.6,187.3 L241.4,184.4 L233.9,180.4 L230.8,172.2 L223.0,170.7 L216.4,175.8 L212.4,171.1 L207.3,165.6 L200.6,168.2 L194.4,168.2 L186.8,170.1 L182.5,172.3 L176.5,168.7 L168.8,167.8 L160.1,167.7 L153.2,170.1 L149.5,164.3 L155.1,159.4 L151.5,157.0 L146.6,147.0 L148.0,137.7 L147.2,136.3 L146.0,125.1 L143.6,119.7 L139.5,114.1 L134.7,103.3 L131.5,93.7 L136.6,94.4 L146.2,97.2 L154.1,93.6 L162.3,98.6 L162.0,108.4 L166.9,115.2 Z"></path>
+<path class="region" data-code="32" data-nom="Hauts-de-France" data-slug="hauts-de-france" d="M392.9,76.5 L397.8,82.2 L396.3,92.2 L390.4,98.1 L389.4,102.6 L389.1,109.6 L383.2,112.6 L380.5,115.9 L372.1,121.0 L374.3,125.8 L370.2,130.0 L371.4,137.1 L364.8,146.1 L360.1,142.9 L352.9,137.4 L349.3,130.7 L343.3,132.9 L334.6,131.8 L327.8,131.1 L321.4,129.2 L313.4,126.7 L307.3,125.6 L300.3,126.2 L292.1,125.9 L288.1,122.5 L291.3,118.8 L289.2,112.1 L291.9,106.8 L290.1,103.9 L288.4,99.6 L288.7,93.3 L289.9,87.3 L286.3,80.0 L279.7,74.2 L274.8,71.3 L283.7,63.7 L281.2,56.5 L282.6,46.6 L282.8,38.7 L283.8,30.2 L286.3,20.1 L298.3,13.9 L308.2,11.8 L316.9,10.0 L327.8,15.8 L326.9,22.5 L333.9,28.4 L340.8,31.2 L348.8,25.9 L354.9,31.6 L355.9,39.2 L361.5,44.2 L366.3,44.5 L372.7,49.4 L374.4,56.4 L378.9,53.5 L386.6,53.6 L392.7,58.6 L394.6,61.1 L395.5,67.5 L393.2,74.9 L392.9,76.5 Z"></path>
+<path class="region" data-code="44" data-nom="Grand Est" data-slug="grand-est" d="M396.9,77.8 L411.1,77.1 L419.6,66.9 L422.1,71.1 L425.0,81.4 L428.9,87.6 L438.8,94.2 L446.1,98.7 L455.3,104.9 L463.4,102.6 L471.6,108.1 L479.5,106.4 L488.5,108.4 L497.9,114.4 L502.2,122.2 L510.2,123.7 L519.2,128.0 L529.2,128.8 L538.8,131.5 L552.7,135.1 L562.4,137.9 L560.2,150.4 L547.5,179.4 L540.8,204.7 L538.8,227.0 L535.1,232.0 L523.4,232.9 L517.5,224.2 L517.3,217.0 L507.1,210.1 L496.2,205.0 L484.1,202.7 L474.3,199.3 L469.3,202.3 L462.2,208.6 L459.6,218.3 L449.0,219.8 L440.8,225.7 L433.6,220.7 L428.4,215.8 L427.3,207.7 L421.2,200.3 L410.9,201.2 L397.4,203.8 L390.8,203.3 L382.6,199.5 L378.3,193.9 L370.6,187.5 L366.2,177.4 L361.0,170.3 L367.1,161.4 L364.0,155.4 L364.3,148.6 L373.1,136.2 L374.1,128.5 L372.1,121.5 L380.8,114.0 L388.8,112.4 L389.7,102.3 L393.2,95.0 L396.8,84.8 L396.9,77.8 Z"></path>
+<path class="region" data-code="52" data-nom="Pays de la Loire" data-slug="pays-de-la-loire" d="M109.4,233.7 L116.3,229.6 L123.4,228.8 L128.3,220.1 L138.7,218.0 L145.9,214.0 L152.7,209.8 L162.5,210.4 L166.0,201.4 L170.8,196.7 L168.6,185.9 L169.8,175.6 L169.4,167.7 L177.6,168.5 L183.7,171.7 L187.3,171.7 L195.2,167.6 L202.4,167.4 L208.6,167.2 L212.5,174.0 L218.6,173.9 L226.1,169.8 L231.3,175.6 L236.5,181.3 L243.7,183.4 L250.5,188.5 L251.2,193.6 L250.8,199.6 L248.1,205.5 L244.5,214.0 L238.7,220.6 L231.8,224.2 L224.7,225.9 L221.6,236.7 L218.4,248.0 L211.8,255.3 L206.2,255.7 L196.3,257.1 L191.2,259.6 L183.8,261.9 L176.5,263.3 L178.2,265.6 L182.0,271.7 L185.1,277.8 L188.7,285.1 L187.5,291.7 L189.7,298.4 L184.1,304.7 L176.7,303.7 L169.7,302.1 L162.0,306.2 L154.4,302.2 L142.2,295.8 L134.5,285.0 L122.9,272.5 L129.2,260.3 L121.4,253.9 L121.7,246.7 L113.7,244.5 L106.4,242.8 L109.0,235.4 L109.4,233.7 Z"></path>
+<path class="region" data-code="53" data-nom="Bretagne" data-slug="bretagne" d="M128.8,164.3 L128.7,162.2 L135.8,156.1 L151.2,168.9 L166.3,167.0 L168.2,184.6 L166.6,200.9 L153.5,209.8 L139.4,217.7 L123.6,228.6 L109.5,233.5 L102.6,229.8 L102.2,227.6 L94.7,231.2 L93.6,227.4 L99.6,223.4 L95.7,222.7 L90.7,225.3 L87.9,224.2 L84.3,225.3 L79.9,231.1 L79.8,217.8 L77.6,215.3 L71.7,218.1 L73.8,213.3 L70.0,217.3 L63.2,210.6 L57.7,210.4 L49.6,212.1 L42.7,208.6 L38.8,203.0 L36.0,208.2 L29.8,211.8 L20.6,197.0 L15.4,195.1 L30.1,193.8 L20.9,187.1 L18.7,181.2 L31.3,181.0 L33.3,183.5 L29.2,179.5 L25.0,178.7 L23.7,175.7 L10.7,176.9 L10.0,167.4 L20.7,165.0 L18.8,161.4 L27.2,157.9 L38.6,156.3 L45.2,160.1 L49.3,158.4 L58.3,158.1 L63.8,148.5 L75.4,146.5 L82.2,145.5 L85.4,148.4 L92.1,157.6 L101.7,166.9 L115.1,157.2 L120.9,161.7 L127.8,161.9 L128.8,164.3 Z"></path>
+<path class="region" data-code="75" data-nom="Nouvelle-Aquitaine" data-slug="nouvelle-aquitaine" d="M275.8,302.0 L285.2,299.4 L298.1,296.7 L314.9,300.8 L322.7,308.4 L326.8,321.5 L320.2,333.1 L323.3,343.6 L322.8,356.0 L316.7,363.0 L310.3,375.8 L306.8,386.3 L294.0,389.1 L282.3,383.4 L276.0,391.6 L269.4,403.5 L258.4,413.9 L257.2,425.5 L254.9,431.3 L249.3,439.7 L239.0,444.1 L225.1,446.5 L217.3,454.0 L206.2,453.2 L206.0,462.6 L204.6,473.6 L213.2,481.0 L213.9,489.4 L206.8,502.7 L201.5,516.7 L190.6,521.8 L178.9,512.8 L160.7,507.1 L154.3,500.5 L145.3,491.2 L143.5,485.2 L153.6,464.2 L159.4,433.2 L165.7,407.5 L169.0,403.2 L160.8,408.5 L165.1,367.4 L169.9,347.1 L166.0,334.4 L168.5,323.9 L163.4,311.1 L174.2,303.0 L186.1,303.9 L187.5,292.1 L186.8,280.1 L180.4,269.7 L176.9,263.0 L189.6,261.2 L200.4,256.1 L213.3,256.1 L222.6,257.6 L231.7,265.0 L246.5,269.0 L254.2,283.2 L265.5,296.1 L275.8,302.0 Z"></path>
+<path class="region" data-code="76" data-nom="Occitanie" data-slug="occitanie" d="M291.8,536.3 L279.5,531.9 L272.6,527.3 L260.0,523.5 L246.4,518.8 L241.8,528.8 L228.0,529.9 L215.1,529.3 L204.8,521.8 L202.6,509.8 L210.0,498.6 L215.6,487.6 L213.1,480.9 L207.2,473.0 L204.5,465.7 L206.9,456.3 L210.9,452.1 L217.5,450.9 L225.6,447.4 L237.9,444.2 L247.4,441.3 L252.7,435.8 L253.2,427.1 L260.6,422.1 L261.0,412.6 L269.6,402.9 L277.0,393.3 L278.7,384.0 L289.5,388.0 L298.4,387.9 L305.3,393.9 L307.6,404.3 L315.3,407.3 L324.7,402.7 L329.1,393.8 L335.1,393.8 L340.7,402.6 L345.7,399.8 L351.6,393.9 L360.3,388.5 L369.5,393.5 L377.0,398.3 L381.9,406.6 L386.3,418.4 L389.0,427.9 L400.5,427.8 L410.8,428.9 L420.9,444.6 L414.5,458.1 L406.9,472.6 L392.0,478.8 L372.8,485.6 L351.0,500.2 L345.6,525.2 L349.2,540.6 L346.4,544.3 L334.3,546.3 L325.4,549.8 L313.3,545.5 L299.6,548.5 L289.5,538.4 L291.8,536.3 Z"></path>
+<path class="region" data-code="84" data-nom="Auvergne-Rhône-Alpes" data-slug="auvergne-rhone-alpes" d="M420.4,312.6 L430.4,292.5 L442.8,295.8 L449.9,303.8 L465.0,307.3 L478.8,302.5 L471.5,314.1 L486.0,308.7 L493.1,300.3 L508.4,304.8 L511.0,318.8 L516.0,330.6 L507.9,339.7 L516.0,353.6 L520.8,366.3 L511.1,375.3 L496.9,378.8 L484.0,377.8 L488.1,391.9 L474.8,396.8 L465.5,404.9 L456.5,414.5 L447.8,421.4 L457.6,431.0 L453.2,439.3 L437.8,434.2 L425.1,431.4 L410.3,427.8 L398.2,431.1 L388.7,423.2 L383.8,412.3 L379.5,399.7 L370.5,393.4 L359.2,388.1 L349.3,391.9 L344.2,404.6 L338.1,395.4 L330.6,391.7 L324.3,402.7 L314.0,406.6 L307.6,401.2 L304.0,388.0 L309.0,378.6 L314.0,366.7 L322.5,360.2 L322.2,345.9 L317.6,334.4 L327.1,325.6 L323.8,312.2 L314.7,303.1 L319.9,291.1 L325.5,282.6 L337.2,277.9 L355.1,279.6 L367.5,278.7 L376.9,290.1 L386.3,302.6 L388.3,312.8 L401.7,312.0 L411.3,305.5 L418.3,310.0 L420.4,312.6 Z"></path>
+<path class="region" data-code="93" data-nom="Provence-Alpes-Côte d'Azur" data-slug="provence-alpes-cote-dazur" d="M513.5,407.1 L509.6,415.7 L511.3,424.4 L516.0,433.0 L525.2,437.3 L534.2,440.1 L543.4,436.7 L544.3,445.9 L539.5,454.2 L536.7,463.1 L530.4,467.5 L524.8,469.6 L520.9,476.0 L513.8,479.0 L509.7,484.1 L502.6,488.6 L500.2,492.8 L500.3,499.1 L492.6,500.1 L487.4,504.3 L479.2,505.8 L477.8,504.8 L469.7,502.5 L470.5,505.6 L464.5,504.3 L459.8,500.9 L453.7,498.2 L448.0,497.1 L445.0,491.6 L443.3,487.5 L434.1,489.4 L429.5,485.3 L423.8,481.7 L424.4,487.4 L410.8,486.4 L398.0,478.3 L407.2,472.3 L414.1,462.3 L418.8,452.1 L417.4,439.4 L420.2,428.0 L430.0,430.0 L436.4,433.3 L446.4,436.5 L455.1,436.1 L458.9,433.1 L453.7,427.2 L450.3,421.7 L456.6,417.4 L457.9,407.1 L464.6,403.5 L470.6,397.8 L481.1,394.5 L488.1,390.7 L482.0,382.4 L488.6,381.1 L497.2,378.5 L504.9,385.3 L509.5,394.5 L516.6,399.7 L514.0,406.2 L513.5,407.1 Z"></path>
+<path class="region" data-code="94" data-nom="Corse" data-slug="corse" d="M618.9,580.7 L619.2,586.6 L617.7,591.8 L616.7,595.0 L613.9,596.8 L617.2,597.3 L613.5,601.0 L613.2,604.7 L611.1,608.3 L612.1,609.2 L608.6,610.0 L605.7,608.9 L605.2,606.6 L603.4,604.9 L600.3,604.0 L597.0,602.0 L593.7,599.7 L592.2,597.1 L594.3,594.5 L597.0,591.2 L591.8,589.7 L588.3,588.0 L589.9,585.1 L592.3,582.6 L592.4,579.1 L589.6,577.6 L584.9,577.5 L585.4,573.8 L588.8,570.3 L589.2,565.9 L585.2,563.9 L583.7,562.1 L583.2,558.8 L583.3,557.1 L587.7,555.6 L586.2,553.3 L585.2,550.6 L582.6,549.7 L584.4,548.1 L586.9,546.0 L586.8,542.4 L589.3,539.4 L589.8,536.1 L593.0,535.7 L596.3,533.9 L598.9,532.4 L604.0,530.4 L606.5,526.9 L611.7,527.0 L614.5,529.8 L616.2,523.9 L615.8,516.9 L616.5,512.5 L618.8,509.3 L621.1,512.1 L622.2,517.9 L622.0,524.0 L621.2,531.5 L624.9,543.5 L625.7,555.0 L623.5,568.0 L618.7,579.7 L618.9,580.7 Z"></path>
+</svg>
             </div>
-            <div class="usecase-card c2" data-cats="de">
-              <svg class="icon kpi-watermark" data-lucide="shield-check"></svg>
-              <span class="chip"><svg class="icon" data-lucide="shield-check"></svg></span>
-              <h3>Maintien dans l'emploi</h3>
-              <p>Suivre les sorties précoces d'emploi et les leviers d'accompagnement à mobiliser pour sécuriser les parcours.</p>
-              <span class="go">Consulter <svg class="icon" data-lucide="arrow-right" style="width:14px;height:14px"></svg></span>
-            </div>
-            <div class="usecase-card c3" data-cats="ent de">
-              <svg class="icon kpi-watermark" data-lucide="git-compare-arrows"></svg>
-              <span class="chip"><svg class="icon" data-lucide="git-compare-arrows"></svg></span>
-              <h3>Incidence des difficultés de pourvoi sur le taux de recours</h3>
-              <p>Mettre en regard les tensions de recrutement des entreprises et le recours des demandeurs d'emploi au réseau.</p>
-              <span class="go">Consulter <svg class="icon" data-lucide="arrow-right" style="width:14px;height:14px"></svg></span>
-            </div>
-            <div class="usecase-card c4" data-cats="de">
-              <svg class="icon kpi-watermark" data-lucide="scale"></svg>
-              <span class="chip"><svg class="icon" data-lucide="scale"></svg></span>
-              <h3>Besoins VS Services</h3>
-              <p>Confronter les contraintes des demandeurs d'emploi d'un territoire à l'offre de service disponible, par grande typologie de contrainte ou frein à l'emploi.</p>
-              <span class="go">Consulter <svg class="icon" data-lucide="arrow-right" style="width:14px;height:14px"></svg></span>
-            </div>
+            <div class="map-hint"><svg class="icon" data-lucide="mouse-pointer-click" style="width:13px;height:13px"></svg>Cliquez sur une région pour filtrer les indicateurs</div>
+            <button class="territory-reset" id="territoryReset">Réinitialiser (national)</button>
           </div>
-        </div>
-        <div class="reel-dots" id="usecaseReelDots"></div>
-        </div>
-      </section>
+          </div>
 
-      <!-- ============== GOUVERNANCE RPE : pleine largeur, sous la carte et les indicateurs ============== -->
-      <section class="block" id="gouvernance">
-        <div class="block-head">
-          <h2><svg class="icon" data-lucide="landmark"></svg>Gouvernance du Réseau pour l'emploi</h2>
-        </div>
-        <div class="gov-banner">
-          <div class="panel-graphic"><svg class="icon p-icon" data-lucide="landmark"></svg></div>
-          <div class="gov-top">
-            <div class="gov-txt">
-              <span class="tag">Instances de pilotage</span>
-              <h3>Cockpit de pilotage</h3>
-              <p>Vision consolidée destinée aux instances de gouvernance nationales, régionales et départementales du Réseau pour l'emploi. Le cockpit croise le niveau de maturité des territoires (démarche de progression et d'impact), la fréquentation du tableau de bord du RPE, les fiches action saisies par les CLPE, ainsi que la performance relative (écarts socio-économiques par rapport aux territoires les plus comparables), pour éclairer le pilotage et l'avancement des feuilles de route.</p>
+          <div class="right-col">
+          <div class="kpi-legend-row">
+            <div class="kpi-legend">
+              <span class="item"><span class="dot de"></span>Demandeur d'emploi</span>
+              <span class="item"><span class="dot ent"></span>Entreprises</span>
+              <span class="item"><span class="dot form"></span>Formation</span>
             </div>
-            <button class="btn-white">Accéder au cockpit <svg class="icon" data-lucide="arrow-right" style="width:14px;height:14px"></svg></button>
           </div>
-          <div class="gov-divider"></div>
-          <div class="gov-fr">
-            <div class="gov-fr-lbl"><svg class="icon" data-lucide="clipboard-list" style="width:13px;height:13px"></svg>Feuille de route &amp; fiches action</div>
-            <div class="gov-fr-split">
-              <div class="gov-fr-col gov-fr-col-links">
-                <div class="gov-fr-item"><span class="chip"><svg class="icon" data-lucide="file-text"></svg></span>
-                  <div class="txt"><h4>Fiche action</h4><p>Consulter et saisir les fiches action par territoire</p></div></div>
-                <div class="gov-fr-item"><span class="chip"><svg class="icon" data-lucide="map"></svg></span>
-                  <div class="txt"><h4>Feuille de route</h4><p>Suivre l'avancement de la feuille de route par territoire</p></div></div>
+          <div class="kpi-groups">
+          <div class="kpi-col kpi-col--de">
+            <div class="kpi kpi--de">
+              <svg class="icon kpi-watermark" data-lucide="users"></svg>
+              <div class="kpi-top"><span class="kpi-chip"><svg class="icon" data-lucide="users"></svg></span><span class="kpi-label">Nombre d'inscrits à France Travail</span></div>
+              <div class="kpi-body">
+                <div class="kpi-value-row"><span class="kpi-num">7 886 509</span><div class="kpi-benchmark" title="Repère national : 7 000 000"><svg class="icon" data-lucide="target"></svg><span class="val">7,0 M</span></div></div>
+                <div class="kpi-month-line">juin 2026</div>
+                <div class="kpi-compare">7 485 315 en juin 2025</div>
               </div>
-              <div class="gov-fr-sep"></div>
-              <div class="gov-fr-col gov-fr-col-stats gov-fr-col-3">
-                <div class="gov-fr-terr-col">
-                  <div class="gov-fr-terr-lbl">Local</div>
-                  <div class="gov-fr-item gov-fr-stat"><span class="chip"><svg class="icon" data-lucide="list-checks"></svg></span>
-                    <div class="txt"><h4>1 512</h4><p>Fiches action</p></div></div>
-                  <div class="gov-fr-item gov-fr-stat"><span class="chip"><svg class="icon" data-lucide="route"></svg></span>
-                    <div class="txt"><h4>301</h4><p>Feuilles de route</p></div></div>
-                </div>
-                <div class="gov-fr-terr-col">
-                  <div class="gov-fr-terr-lbl">Départemental</div>
-                  <div class="gov-fr-item gov-fr-stat"><span class="chip"><svg class="icon" data-lucide="list-checks"></svg></span>
-                    <div class="txt"><h4>256</h4><p>Fiches action</p></div></div>
-                  <div class="gov-fr-item gov-fr-stat"><span class="chip"><svg class="icon" data-lucide="route"></svg></span>
-                    <div class="txt"><h4>87</h4><p>Feuilles de route</p></div></div>
-                </div>
-                <div class="gov-fr-terr-col">
-                  <div class="gov-fr-terr-lbl">Régional</div>
-                  <div class="gov-fr-item gov-fr-stat"><span class="chip"><svg class="icon" data-lucide="list-checks"></svg></span>
-                    <div class="txt"><h4>67</h4><p>Fiches action</p></div></div>
-                  <div class="gov-fr-item gov-fr-stat"><span class="chip"><svg class="icon" data-lucide="route"></svg></span>
-                    <div class="txt"><h4>17</h4><p>Feuilles de route</p></div></div>
-                </div>
+            </div>
+
+            <div class="kpi kpi--de">
+              <svg class="icon kpi-watermark" data-lucide="door-open"></svg>
+              <div class="kpi-top"><span class="kpi-chip"><svg class="icon" data-lucide="door-open"></svg></span><span class="kpi-label">Taux d'accès à l'emploi à 6 mois</span></div>
+              <div class="kpi-body">
+                <div class="kpi-value-row"><span class="kpi-num">32,0 %</span><div class="kpi-benchmark" title="Repère national : 36,0 %"><svg class="icon" data-lucide="target"></svg><span class="val">36,0 %</span></div></div>
+                <div class="kpi-month-line">déc. 2025</div>
+                <div class="kpi-compare">Cumul 12 mois : 32,3 %</div>
+              </div>
+            </div>
+
+            <div class="kpi kpi--de">
+              <svg class="icon kpi-watermark" data-lucide="user-check"></svg>
+              <div class="kpi-top"><span class="kpi-chip"><svg class="icon" data-lucide="user-check"></svg></span><span class="kpi-label">Taux de présence en emploi à 6 mois</span></div>
+              <div class="kpi-body">
+                <div class="kpi-value-row"><span class="kpi-num">23,1 %</span><div class="kpi-benchmark" title="Repère national : 25,0 %"><svg class="icon" data-lucide="target"></svg><span class="val">25,0 %</span></div></div>
+                <div class="kpi-month-line">déc. 2025</div>
+                <div class="kpi-compare">Cumul 12 mois : 21,7 %</div>
+              </div>
+            </div>
+
+            <div class="kpi kpi--de na">
+              <svg class="icon kpi-watermark" data-lucide="timer"></svg>
+              <div class="kpi-top"><span class="kpi-chip"><svg class="icon" data-lucide="timer"></svg></span><span class="kpi-label">Délai de démarrage de l'accompagnement</span></div>
+              <div class="kpi-body">
+                <div class="kpi-value-row"><span class="kpi-num">--</span><div class="kpi-benchmark" title="Repère national : 23 jours"><svg class="icon" data-lucide="target"></svg><span class="val">23 j</span></div></div>
+                <div class="kpi-month-line">Cumul 12 mois</div>
+                <div class="kpi-compare">Donnée non disponible</div>
+              </div>
+            </div>
+
+            <div class="kpi kpi--de">
+              <svg class="icon kpi-watermark" data-lucide="smile"></svg>
+              <div class="kpi-top"><span class="kpi-chip"><svg class="icon" data-lucide="smile"></svg></span><span class="kpi-label">Taux de satisfaction des DE pour leur accompagnement</span></div>
+              <div class="kpi-body">
+                <div class="kpi-value-row"><span class="kpi-num">79,5 %</span><div class="kpi-benchmark" title="Repère national : 85,0 %"><svg class="icon" data-lucide="target"></svg><span class="val">85,0 %</span></div></div>
+                <div class="kpi-month-line">avr. 2026</div>
+                <div class="kpi-compare">Cumul 12 mois : 80,7 %</div>
               </div>
             </div>
           </div>
+          <div class="kpi-col kpi-col--ent">
+            <div class="kpi kpi--ent">
+              <svg class="icon kpi-watermark" data-lucide="handshake"></svg>
+              <div class="kpi-top"><span class="kpi-chip"><svg class="icon" data-lucide="handshake"></svg></span><span class="kpi-label">Taux de pourvoi des offres</span></div>
+              <div class="kpi-body">
+                <div class="kpi-value-row"><span class="kpi-num">91,6 %</span><div class="kpi-benchmark" title="Repère national : 90,0 %"><svg class="icon" data-lucide="target"></svg><span class="val">90,0 %</span></div></div>
+                <div class="kpi-month-line">mai 2026</div>
+                <div class="kpi-compare">Cumul 12 mois : 91,5 %</div>
+              </div>
+            </div>
+
+            <div class="kpi kpi--ent">
+              <svg class="icon kpi-watermark" data-lucide="calendar-clock"></svg>
+              <div class="kpi-top"><span class="kpi-chip"><svg class="icon" data-lucide="calendar-clock"></svg></span><span class="kpi-label">Délai de pourvoi des offres</span></div>
+              <div class="kpi-body">
+                <div class="kpi-value-row"><span class="kpi-num">24,0 j</span><div class="kpi-benchmark" title="Repère national : 30 jours"><svg class="icon" data-lucide="target"></svg><span class="val">30 j</span></div></div>
+                <div class="kpi-month-line">mai 2026</div>
+                <div class="kpi-compare">Cumul 12 mois : 21,9 j</div>
+              </div>
+            </div>
+
+            <div class="kpi kpi--ent">
+              <svg class="icon kpi-watermark" data-lucide="share-2"></svg>
+              <div class="kpi-top"><span class="kpi-chip"><svg class="icon" data-lucide="share-2"></svg></span><span class="kpi-label">Taux de recours au Réseau pour l'emploi</span></div>
+              <div class="kpi-body">
+                <div class="kpi-value-row"><span class="kpi-num">24,3 %</span><div class="kpi-benchmark" title="Repère national : 28,0 %"><svg class="icon" data-lucide="target"></svg><span class="val">28,0 %</span></div></div>
+                <div class="kpi-month-line">juil. 2026</div>
+                <div class="kpi-compare">24,1 % en juil. 2025</div>
+              </div>
+            </div>
+
+            <div class="kpi kpi--ent na">
+              <svg class="icon kpi-watermark" data-lucide="building-2"></svg>
+              <div class="kpi-top"><span class="kpi-chip"><svg class="icon" data-lucide="building-2"></svg></span><span class="kpi-label">Taux de satisfaction des entreprises</span></div>
+              <div class="kpi-body">
+                <div class="kpi-value-row"><span class="kpi-num">--</span><div class="kpi-benchmark" title="Repère national : 80,0 %"><svg class="icon" data-lucide="target"></svg><span class="val">80,0 %</span></div></div>
+                <div class="kpi-month-line">Cumul 12 mois</div>
+                <div class="kpi-compare">Donnée non disponible</div>
+              </div>
+            </div>
+
+            <div class="kpi-ghost" aria-hidden="true"></div>
+          </div>
+          <div class="kpi-col kpi-col--form">
+            <div class="kpi kpi--form">
+              <svg class="icon kpi-watermark" data-lucide="graduation-cap"></svg>
+              <div class="kpi-top"><span class="kpi-chip"><svg class="icon" data-lucide="graduation-cap"></svg></span><span class="kpi-label">Part des publics prioritaires entrants en formation</span></div>
+              <div class="kpi-body">
+                <div class="kpi-value-row"><span class="kpi-num">67,9 %</span><div class="kpi-benchmark" title="Repère national : 75,0 %"><svg class="icon" data-lucide="target"></svg><span class="val">75,0 %</span></div></div>
+                <div class="kpi-month-line">mai 2026</div>
+                <div class="kpi-compare">Cumul 12 mois : 65,4 %</div>
+              </div>
+            </div>
+
+            <div class="kpi kpi--form">
+              <svg class="icon kpi-watermark" data-lucide="award"></svg>
+              <div class="kpi-top"><span class="kpi-chip"><svg class="icon" data-lucide="award"></svg></span><span class="kpi-label">Taux d'accès à l'emploi 6 mois après une formation</span></div>
+              <div class="kpi-body">
+                <div class="kpi-value-row"><span class="kpi-num">59,5 %</span><div class="kpi-benchmark" title="Repère national : 65,0 %"><svg class="icon" data-lucide="target"></svg><span class="val">65,0 %</span></div></div>
+                <div class="kpi-month-line">déc. 2026</div>
+                <div class="kpi-compare">Cumul 12 mois : 60,9 %</div>
+              </div>
+            </div>
+
+            <div class="kpi kpi--form">
+              <svg class="icon kpi-watermark" data-lucide="user-check"></svg>
+              <div class="kpi-top"><span class="kpi-chip"><svg class="icon" data-lucide="user-check"></svg></span><span class="kpi-label">Taux de présence en emploi 6 mois après une formation</span></div>
+              <div class="kpi-body">
+                <div class="kpi-value-row"><span class="kpi-num">49,5 %</span><div class="kpi-benchmark" title="Repère national : 55,0 %"><svg class="icon" data-lucide="target"></svg><span class="val">55,0 %</span></div></div>
+                <div class="kpi-month-line">déc. 2026</div>
+                <div class="kpi-compare">Cumul 12 mois : 50,9 %</div>
+              </div>
+            </div>
+
+            <div class="kpi-ghost" aria-hidden="true"></div>
+            <div class="kpi-ghost" aria-hidden="true"></div>
+          </div>
+          </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ============== INDICATEURS STRATÉGIQUES TERRITORIAUX : pleine largeur, pellicule ============== -->
+      <section class="block" id="indicateurs-strategiques-territoriaux">
+        <div class="block-head">
+          <h2><svg class="icon" data-lucide="map-pin"></svg>Indicateurs stratégiques territoriaux</h2>
+        </div>
+        <div class="terr-panel">
+        <div class="panel-graphic"><svg class="icon p-icon" data-lucide="map-pin"></svg></div>
+        <div class="reel">
+          <div class="reel-track" id="terrReel">
+            <div class="kpi kpi-terr">
+              <svg class="icon kpi-watermark" data-lucide="user-round"></svg>
+              <div class="kpi-top"><span class="kpi-chip"><svg class="icon" data-lucide="user-round"></svg></span><span class="kpi-label">Part des séniors entrants en formation</span></div>
+              <div class="kpi-body">
+                <div class="kpi-value-row"><span class="kpi-num">21,1 %</span><div class="kpi-benchmark" title="Repère national : 24,0 %"><svg class="icon" data-lucide="target"></svg><span class="val">24,0 %</span></div></div>
+                <div class="kpi-month-line">mai 2026</div>
+                <div class="kpi-compare">Cumul 12 mois : 19,5 %</div>
+              </div>
+            </div>
+            <div class="kpi kpi-terr">
+              <svg class="icon kpi-watermark" data-lucide="factory"></svg>
+              <div class="kpi-top"><span class="kpi-chip"><svg class="icon" data-lucide="factory"></svg></span><span class="kpi-label">Taux de recours dans l'industrie</span></div>
+              <div class="kpi-body">
+                <div class="kpi-value-row"><span class="kpi-num">20,7 %</span><div class="kpi-benchmark" title="Repère national : 25,0 %"><svg class="icon" data-lucide="target"></svg><span class="val">25,0 %</span></div></div>
+                <div class="kpi-month-line">juil. 2026</div>
+                <div class="kpi-compare">19,2 % en juil. 2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reel-dots" id="terrReelDots"></div>
         </div>
       </section>
 
