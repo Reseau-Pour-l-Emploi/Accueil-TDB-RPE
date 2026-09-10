@@ -389,10 +389,21 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
 .indic-banner p{margin:0 0 10px;font-size:13.5px;line-height:1.55;color:rgba(255,255,255,.92);max-width:760px}
 .indic-banner ul{margin:0 0 12px;padding-left:18px;font-size:13px;line-height:1.7;color:rgba(255,255,255,.92);max-width:760px}
 .indic-banner ul li{margin-bottom:2px}
-.indic-banner .btn-white{flex:none;display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ft-indigo);border:0;border-radius:9px;padding:12px 22px;font-weight:700;font-size:13.5px;cursor:pointer;box-shadow:var(--sh-md);transition:transform .15s}
+.indic-banner .btn-white{flex:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#fff;color:var(--ft-indigo);border:0;border-radius:9px;padding:12px 22px;font-weight:700;font-size:13.5px;cursor:pointer;box-shadow:var(--sh-md);transition:transform .15s}
 .indic-banner .btn-white:hover{transform:translateY(-2px)}
+.indic-banner-preview{flex:none;width:340px;display:flex;flex-direction:column;gap:14px}
+.indic-preview-thumb{position:relative;display:block;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.3);box-shadow:var(--sh-md);background:#fff;line-height:0;transition:transform .18s,box-shadow .18s}
+.indic-preview-thumb img{display:block;width:100%;height:auto}
+.indic-preview-thumb:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.35)}
+/* ---- Vignette "live" : aperçu réel de la page via iframe mis à l'échelle ---- */
+.indic-preview-frame{position:relative;width:100%;aspect-ratio:340/156;overflow:hidden;background:#fff}
+.indic-preview-frame iframe{position:absolute;top:0;left:0;width:1400px;height:760px;border:0;pointer-events:none;transform:scale(.2429);transform-origin:top left}
+.indic-preview-thumb .indic-preview-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,20,64,.82) 0%,rgba(13,20,64,0) 55%);display:flex;align-items:flex-end;justify-content:flex-start;padding:10px 12px;opacity:0;transition:opacity .18s}
+.indic-preview-thumb:hover .indic-preview-overlay{opacity:1}
+.indic-preview-overlay span{color:#fff;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:6px}
 @media (max-width:768px){
   .indic-banner{padding:22px 20px}
+  .indic-banner-preview{width:100%}
   .indic-banner .btn-white{width:100%;justify-content:center}
 }
 .chev-btn{display:inline-flex;align-items:center;justify-content:center;flex:none;padding:4px;margin:-4px -6px -4px 0;border-radius:5px}
@@ -495,7 +506,15 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
             </ul>
             <p>Visualisez également les indicateurs stratégiques définis au niveau local pour mesurer l'impact des actions engagées.</p>
           </div>
-          <a class="btn-white" href="indicateurs-strategiques.html"><svg class="icon" data-lucide="gauge" style="width:16px;height:16px"></svg>Consulter les indicateurs stratégiques<svg class="icon" data-lucide="arrow-right" style="width:15px;height:15px"></svg></a>
+          <div class="indic-banner-preview">
+            <a class="indic-preview-thumb" href="indicateurs-strategiques.html" aria-label="Aperçu de la page Indicateurs stratégiques">
+              <div class="indic-preview-frame" aria-hidden="true">
+                <iframe src="indicateurs-strategiques.html" title="Aperçu de la page Indicateurs stratégiques" tabindex="-1" scrolling="no" loading="lazy"></iframe>
+              </div>
+              <span class="indic-preview-overlay"><span><svg class="icon" data-lucide="arrow-up-right" style="width:14px;height:14px"></svg>Voir la page</span></span>
+            </a>
+            <a class="btn-white" href="indicateurs-strategiques.html"><svg class="icon" data-lucide="gauge" style="width:16px;height:16px"></svg>Consulter les indicateurs stratégiques<svg class="icon" data-lucide="arrow-right" style="width:15px;height:15px"></svg></a>
+          </div>
         </div>
       </section>
 
