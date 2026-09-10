@@ -66,24 +66,24 @@ button{font-family:inherit}
 /* ---- Colonne principale ---- */
 .main-col{flex:1;min-width:0;display:flex;flex-direction:column}
 
-header.site{background:#1D1E3C;border-bottom:1px solid rgba(255,255,255,.12);position:sticky;top:0;z-index:1100}
+header.site{background:#fff;border-bottom:1px solid var(--ft-gray-300);position:sticky;top:0;z-index:1100}
 .site-inner{padding:14px 32px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .site-inner img.logo{height:30px}
 .logo-group{display:flex;align-items:center;background:#fff;border-radius:6px;padding:5px 10px;gap:10px;flex:none}
 .rf-logo{height:30px;width:auto;flex:none}
 .logo-sep{width:1px;height:28px;background:var(--ft-border);flex:none}
-.site-sep{width:1px;height:36px;background:rgba(255,255,255,.2);flex:none}
+.site-sep{width:1px;height:36px;background:var(--ft-border);flex:none}
 .site-title{display:flex;align-items:center;gap:10px}
-.site-title h1{font-size:19px;font-weight:700;margin:0;line-height:1.25;color:#fff}
+.site-title h1{font-size:19px;font-weight:700;margin:0;line-height:1.25;color:var(--ft-navy)}
 .header-actions{margin-left:auto;display:flex;align-items:center;gap:10px}
-.btn-pill{display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:9px;font-weight:700;font-size:13px;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s;backdrop-filter:blur(6px)}
+.btn-pill{display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:9px;font-weight:700;font-size:13px;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
 .btn-pill:hover{transform:translateY(-2px)}
-.btn-pill--rose{background:rgba(229,0,91,.26);border:1px solid rgba(255,120,175,.75);box-shadow:0 0 24px rgba(229,0,91,.55),0 0 6px rgba(255,150,190,.6),inset 0 0 10px rgba(255,255,255,.08);color:#FFEAF2}
-.btn-pill--rose:hover{background:rgba(229,0,91,.36);box-shadow:0 0 34px rgba(229,0,91,.75),0 0 10px rgba(255,150,190,.8),inset 0 0 12px rgba(255,255,255,.12)}
-.btn-pill--navy{background:rgba(126,88,160,.26);border:1px solid rgba(190,155,220,.75);box-shadow:0 0 24px rgba(126,88,160,.55),0 0 6px rgba(200,170,230,.6),inset 0 0 10px rgba(255,255,255,.08);color:#F5EEFC}
-.btn-pill--navy:hover{background:rgba(126,88,160,.36);box-shadow:0 0 34px rgba(126,88,160,.75),0 0 10px rgba(200,170,230,.8),inset 0 0 12px rgba(255,255,255,.12)}
-.btn-pill--bleu{background:rgba(64,107,222,.26);border:1px solid rgba(140,170,255,.75);box-shadow:0 0 24px rgba(64,107,222,.55),0 0 6px rgba(160,190,255,.6),inset 0 0 10px rgba(255,255,255,.08);color:#EAF1FF}
-.btn-pill--bleu:hover{background:rgba(64,107,222,.36);box-shadow:0 0 34px rgba(64,107,222,.75),0 0 10px rgba(160,190,255,.8),inset 0 0 12px rgba(255,255,255,.12)}
+.btn-pill--rose{background:var(--ft-rose-light);border:1px solid rgba(229,0,91,.35);color:var(--ft-rose)}
+.btn-pill--rose:hover{background:#F8C2D6;box-shadow:var(--sh-sm)}
+.btn-pill--navy{background:var(--ft-violet-light);border:1px solid rgba(126,88,160,.35);color:var(--ft-violet)}
+.btn-pill--navy:hover{background:#DCCFE8;box-shadow:var(--sh-sm)}
+.btn-pill--bleu{background:var(--ft-bleu-light);border:1px solid rgba(64,107,222,.35);color:var(--ft-bleu)}
+.btn-pill--bleu:hover{background:#C9D4F5;box-shadow:var(--sh-sm)}
 .header-icon-btn{position:relative;display:inline-flex}
 .header-icon-btn button{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff}
 .header-icon-btn button:hover{background:rgba(255,255,255,.22)}
@@ -291,7 +291,7 @@ section.block{margin-bottom:36px}
 /* ---- Gouvernance : bloc unique (cockpit + feuille de route fondus) ---- */
 /* ---- Gouvernance : carte compacte verticale sous la carte de territoire ---- */
 /* ---- Gouvernance : bandeau pleine largeur (cockpit + feuille de route fondus) ---- */
-.gov-banner{background:linear-gradient(120deg,#1D1E3C 0%,var(--ft-indigo) 60%,var(--ft-violet) 130%);border-radius:12px;padding:30px 34px;color:#fff;box-shadow:var(--sh-md);position:relative;overflow:hidden}
+.gov-banner{background:linear-gradient(120deg,var(--ft-violet) 0%,#6E3E68 55%,var(--ft-bordeaux) 130%);border-radius:12px;padding:30px 34px;color:#fff;box-shadow:var(--sh-md);position:relative;overflow:hidden}
 .gov-banner::after{content:"";position:absolute;right:-40px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.06)}
 .gov-top{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;position:relative;z-index:1;flex-wrap:wrap}
 .gov-txt{flex:1;min-width:320px;max-width:none}
@@ -315,7 +315,7 @@ section.block{margin-bottom:36px}
 .gov-fr-item .chip .icon{color:#fff;width:17px;height:17px}
 .gov-fr-item .txt h4{margin:0 0 2px;font-size:14px;font-weight:700;color:#fff}
 .gov-fr-item .txt p{margin:0;font-size:11.5px;opacity:.85;color:#fff;line-height:1.35}
-.gov-fr-item.gov-fr-stat{background:rgba(13,20,64,.38);border-color:rgba(255,255,255,.3)}
+.gov-fr-item.gov-fr-stat{background:rgba(92,15,56,.38);border-color:rgba(255,255,255,.3)}
 .gov-fr-item.gov-fr-stat .txt h4,.gov-fr-item.gov-fr-stat .txt p{color:#fff}
 .gov-fr-item.gov-fr-stat .chip{background:rgba(255,255,255,.2)}
 .gov-fr-item.gov-fr-stat .chip .icon{color:#fff}
@@ -397,7 +397,7 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
 .indic-preview-thumb:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.35)}
 /* ---- Vignette "live" : aperçu réel de la page via iframe mis à l'échelle ---- */
 .indic-preview-frame{position:relative;width:100%;aspect-ratio:340/156;overflow:hidden;background:#fff}
-.indic-preview-frame iframe{position:absolute;top:0;left:0;width:1400px;height:760px;border:0;pointer-events:none;transform:scale(.2429);transform-origin:top left}
+.indic-preview-frame iframe{position:absolute;top:0;left:0;width:1400px;height:900px;border:0;pointer-events:none;transform:scale(.3036) translate(-280px,-160px);transform-origin:top left}
 .indic-preview-thumb .indic-preview-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,20,64,.82) 0%,rgba(13,20,64,0) 55%);display:flex;align-items:flex-end;justify-content:flex-start;padding:10px 12px;opacity:0;transition:opacity .18s}
 .indic-preview-thumb:hover .indic-preview-overlay{opacity:1}
 .indic-preview-overlay span{color:#fff;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:6px}
