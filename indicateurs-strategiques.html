@@ -76,14 +76,13 @@ header.site{background:#fff;border-bottom:1px solid var(--ft-gray-300);position:
 .site-title{display:flex;align-items:center;gap:10px}
 .site-title h1{font-size:19px;font-weight:700;margin:0;line-height:1.25;color:var(--ft-navy)}
 .header-actions{margin-left:auto;display:flex;align-items:center;gap:10px}
-.btn-pill{display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:9px;font-weight:700;font-size:13px;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
-.btn-pill:hover{transform:translateY(-2px)}
-.btn-pill--rose{background:var(--ft-rose-light);border:1px solid rgba(229,0,91,.35);color:var(--ft-rose)}
-.btn-pill--rose:hover{background:#F8C2D6;box-shadow:var(--sh-sm)}
-.btn-pill--navy{background:var(--ft-violet-light);border:1px solid rgba(126,88,160,.35);color:var(--ft-violet)}
-.btn-pill--navy:hover{background:#DCCFE8;box-shadow:var(--sh-sm)}
-.btn-pill--bleu{background:var(--ft-bleu-light);border:1px solid rgba(64,107,222,.35);color:var(--ft-bleu)}
-.btn-pill--bleu:hover{background:#C9D4F5;box-shadow:var(--sh-sm)}
+.btn-pill{display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:4px;font-weight:500;font-size:13px;cursor:pointer;transition:background .15s,border-color .15s;background:#fff;border:1.5px solid transparent}
+.btn-pill--rose{color:var(--ft-rose);border-color:var(--ft-rose)}
+.btn-pill--rose:hover{background:var(--ft-rose-light)}
+.btn-pill--navy{color:var(--ft-jaune-dark);border-color:var(--ft-jaune-dark)}
+.btn-pill--navy:hover{background:var(--ft-jaune-light)}
+.btn-pill--bleu{color:var(--ft-bleu);border-color:var(--ft-bleu)}
+.btn-pill--bleu:hover{background:var(--ft-bleu-light)}
 .header-icon-btn{position:relative;display:inline-flex}
 .header-icon-btn button{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff}
 .header-icon-btn button:hover{background:rgba(255,255,255,.22)}
@@ -426,8 +425,7 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
         <div class="sub-item"><svg class="icon" data-lucide="share-2"></svg>Taux de recours</div>
         <div class="sub-item"><svg class="icon" data-lucide="building-2"></svg>Taux de satisfaction des entreprises</div>
         <div class="sub-item"><svg class="icon" data-lucide="handshake"></svg>Taux / délai de pourvoi des offres</div>
-        <div class="sub-item"><svg class="icon" data-lucide="user-round"></svg>Part des séniors entrants en formation</div>
-        <div class="sub-item"><svg class="icon" data-lucide="factory"></svg>Taux de recours dans l'industrie</div>
+        <div class="sub-item"><svg class="icon" data-lucide="map-pin"></svg>Indicateurs stratégiques territoriaux</div>
       </div>
             <a class="nav-item" href="index.html#analyse-ciblee"><svg class="icon" data-lucide="users-round"></svg><span class="lbl">Analyse ciblée</span><span class="chev-btn" aria-label="Plier / déplier" role="button" tabindex="0"><svg class="icon chev" data-lucide="chevron-down"></svg></span></a>
       <div class="sub-nav">
