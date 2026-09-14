@@ -426,13 +426,10 @@ footer.site .inner{max-width:1760px;margin:0 auto;padding:18px 20px 18px 24px;fo
         <div class="sub-item"><svg class="icon" data-lucide="share-2"></svg>Taux de recours</div>
         <div class="sub-item"><svg class="icon" data-lucide="building-2"></svg>Taux de satisfaction des entreprises</div>
         <div class="sub-item"><svg class="icon" data-lucide="handshake"></svg>Taux / délai de pourvoi des offres</div>
-      </div>
-      <a class="nav-item" href="indicateurs-strategiques.html#indicateurs-strategiques-territoriaux"><svg class="icon" data-lucide="map-pin"></svg><span class="lbl">Indicateurs stratégiques territoriaux</span><span class="chev-btn" aria-label="Plier / déplier" role="button" tabindex="0"><svg class="icon chev" data-lucide="chevron-down"></svg></span></a>
-      <div class="sub-nav">
         <div class="sub-item"><svg class="icon" data-lucide="user-round"></svg>Part des séniors entrants en formation</div>
         <div class="sub-item"><svg class="icon" data-lucide="factory"></svg>Taux de recours dans l'industrie</div>
       </div>
-      <a class="nav-item" href="index.html#analyse-ciblee"><svg class="icon" data-lucide="users-round"></svg><span class="lbl">Analyse ciblée</span><span class="chev-btn" aria-label="Plier / déplier" role="button" tabindex="0"><svg class="icon chev" data-lucide="chevron-down"></svg></span></a>
+            <a class="nav-item" href="index.html#analyse-ciblee"><svg class="icon" data-lucide="users-round"></svg><span class="lbl">Analyse ciblée</span><span class="chev-btn" aria-label="Plier / déplier" role="button" tabindex="0"><svg class="icon chev" data-lucide="chevron-down"></svg></span></a>
       <div class="sub-nav">
         <div class="sub-item"><svg class="icon" data-lucide="users"></svg>Public</div>
         <div class="sub-item"><svg class="icon" data-lucide="hand-coins"></svg>BRSA</div>
@@ -810,7 +807,7 @@ function initReelDots(reelId){
   function pageCount(){
     var pageWidth = track.clientWidth;
     if(pageWidth <= 0) return 1;
-    return Math.max(1, Math.round(track.scrollWidth / pageWidth));
+    return Math.max(1, Math.ceil((track.scrollWidth - 1) / pageWidth));
   }
 
   function build(){
